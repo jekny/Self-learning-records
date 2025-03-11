@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*document.write(); 是直接往浏览器窗口显示的 ，而console.log ()是在检查的控制台上显示 */
+
+        document.write("乘法表");
+        document.write("<br>");
+        var i = 1;
+        while(i<=9){
+            var j = 1;
+            while(j<=i){
+                document.write(i+"*"+j+"="+j*i+"&nbsp&nbsp&nbsp");
+                j++;
+            }
+            document.write("<br>");
+            i++;
+        }
+
+        var arr = ["北","上","广"];
+
+        document.write("<ul>")
+        for(var i = 0;i<arr.length;i++){
+            document.write("<li>"+arr[i]+"</li>");
+        }
+        document.write("<hr>");
+
+        /*foreach 的写法：*/
+        /*+ 括号中的临时变量表示的是元素的索引,不是元素的值,
+          + ()中也不在使用: 分隔,而是使用 in 关键字*/
+        for(var i in arr){
+            document.write("<li>"+arr[i]+"</li>");
+        }
+
+        document.write("</ul>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+/* JS函数声明*/
+/*
+  + 函数没有权限控制符
+  + 不用声明函数的返回值类型,需要返回在函数体中直接return即可,也无需void关键字
+  + 参数列表中,无需数据类型
+  + 调用函数时,实参和形参的个数可以不一致
+  + 声明函数时需要用function关键字
+  + Js函数没有异常列表
+    函数可以作为参数传递给另一个方法
+
+*/
+/*方式一：
+ function 函数名 (参数列表){函数体}
+*/
+function sun (funtt){
+    return funtt(20,30);
+}
+
+
+/*方式二
+  var 函数名 = function (参数列表){函数体}
+*/
+var fun = function(a,b){
+    console.log(arguments)
+    return a+b;
+}
+
+
+var result = sun(fun);
+console.log(result);
+
+
+</script>
+
+<body>
+    
+</body>
+</html>

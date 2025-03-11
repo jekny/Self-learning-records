@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var person = new Object();
+
+        person.name = "lili";
+        person.age = 18;
+        person.food = ["饼干","牛奶","鸡肉噗噗"]
+        person.eat = function(){
+            console.log(this.age+"岁的"+this.name+"喜欢的东西有:");
+            for(var i = 0;i<this.food.length;i++){
+                console.log(this.food[i]);
+            }
+        }
+        person.eat();
+
+    </script>
+</head>
+<body>
+    <p>11</p>
+</body>
+</html>

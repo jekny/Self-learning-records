@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*JSON的语法
+
+​		var obj="{'属性名':'属性值','属性名':{'属性名':'属性值'},
+                    '属性名':['值1','值1','值3']}"*/
+        var person1 = '{ "name":"xiao","dog":{"dogname":"小花狗"},"star":["梨花","诗音","魅音","K1"]}'
+        
+
+        /*通过JSON.parse()方法可以将一个JSON串转换成对象*/
+        var person=  JSON.parse(person1)
+        console.log(person1);
+        console.log(person)
+        console.log(person.name)
+        console.log(person.dog.dogname)
+        console.log(person.star[0])
+
+        /*通过JSON.stringify()方法可以将一个对象转换成一个JSON格式的字符串*/
+        var person6 = JSON.stringify(person);
+        console.log(person6)
+
+    </script>
+</head>
+<body>
+    <p>11</p>
+</body>
+</html>

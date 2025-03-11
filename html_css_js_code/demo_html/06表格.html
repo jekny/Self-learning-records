@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    table标签 代表表格
+        thead标签 代表表头 可以省略不写 
+        tbody标签 代表表体 可以省略不写
+        tfoot标签 代表表尾  可以省略不写
+            
+        
+            tr标签 代表一行
+                td标签 代表行内的一格
+                th标签 自带加粗和居中效果的td
+
+    -->
+    <h2 style="text-align: center;"> 评分表text </h2>
+    <table border="1px" style="margin: 0px auto; width: 300px;">
+        <thead>
+            <tr>
+                <th>排名</th>
+                <th>姓名</th>
+                <th>分数</th>
+                <th >侵占</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td>小小</td>
+                <td>100</td>
+                <td rowspan="6" >
+                    前三名升值加薪
+                </td>
+
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>小liu</td>
+                <td>90</td>
+                
+             
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>美</td>
+                <td>80</td>
+            </tr>  
+            
+            <tr>
+                <td>总人数</td>
+                <td colspan="2">2000</td>
+               
+                
+            </tr> 
+
+            <tr>
+                <td>平均分</td>
+                <td colspan="2">95</td>
+                
+            
+            </tr> 
+            
+            <tr>
+                <td>及格率</td>
+                <td colspan="2">80%</td>
+               
+               
+                
+            
+            </tr>
+        </tbody>
+        <tfoot><!-- 暂时不需要表尾 --></tfoot>
+    </table>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            height: 50px;width: 100px;
+            background-color: aquamarine;
+            color: rgb(221, 18, 18);
+            font-size: 30px;
+            font-family: '隶书';
+            border: 2px solid red;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+    引入方式一：行内式,通过元素开始标签的style属性引入, 样式语法为 样式名:样式值; 样式名:样式值;
+        缺点:
+        + html代码和css样式代码交织在一起,增加阅读难度和维护成本
+        + css样式代码仅对当前元素有效,代码重复量高,复用度低
+
+    引入方式一：内嵌式：通过元素的style属性引入样式
+            通过选择器确定样式的作用元素
+            通过在head标签中的style样式标签定义本页面的公共样式
+    引入方式三：外部样式表（将css样式代码单独放到一个文件中）
+            那个ntml需要这些代码就在head上面通过link标签引入
+            <link rel="stylesheet" href="/demo2_css/css/btn.css">
+    -->
+    <input type="button" name="" id="" value="你提交" 
+   
+    > 
+    
+    <input type="button" name="" id="" value="你提交" 
+    style="height: 50px;width: 100px;
+            background-color: aquamarine;
+            color: rgb(221, 18, 18);
+            font-size: 30px;
+            font-family: '隶书';
+            border: 2px solid red;
+            border-radius: 10px;
+    "
+    >
+</body>
+</html>

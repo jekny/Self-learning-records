@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /* prompt("输入月份"); 弹窗有提示并且有输入框 */
+        var month = prompt("输入月份");
+        console.log(typeof month);/*这里是string类型的*/
+        var month = Number.parseInt(month);
+        console.log(typeof month);/*这里是number类型的*/
+        if( month == 12 || month == 1 || month == 2 ){
+            console.log("is冬");
+        }else if(month >= 3 && month <= 5){
+            console.log("is春");
+        }else{
+            console.log("你好")
+        }
+
+    /* swith和java中几乎一样（也是向下击穿） */
+
+        if('false'){// 非空字符串 if判断为true
+            console.log(true)
+        }else{
+            console.log(false)
+        }
+        if(''){// 长度为0字符串 if判断为false
+            console.log(true)
+        }else{
+            console.log(false)
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <p></p>
+</body>
+</html>
+
+
+
+
+
+

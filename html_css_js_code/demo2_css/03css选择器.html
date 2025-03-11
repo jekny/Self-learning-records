@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  1.元素选择器：
+                标签名{}  缺点有点多（某些同名标签不想用改样式）
+                    input{
+                        height: 50px;width: 100px;
+                        background-color: aquamarine;
+                        }
+                
+            2.id选择器（根据标签的id值设置样式（一般每个元素都有id属性，但在一个页面中，id的·值不应该相同（id具有唯一标识性）））
+                #id值{}  《id具有唯一性，只能定义在一个元素上》
+            3.class选择器（好用）：（根据class属性值确定样式的作用元素）
+                .class属性值{}
+        
+        */
+        #h1{
+            background: #000;
+        }
+
+        .h2{
+            font-size: 24px;
+            font-family: '隶书';
+        }
+        .s2{
+            border: 2px;
+        }
+        .f2{
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <input id="h1" type="button" value="按钮">
+
+    <!-- 上面三个css样式都可以控制这个按钮 -->
+    <input class="h2 s2 f2" type="button" value="按钮">
+
+    <input type="button" value="按钮">
+</body>
+</html>

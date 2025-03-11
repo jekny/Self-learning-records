@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 绑定方式：
+          1.通过元素得属性绑定  onXXX
+          2.通过DOM编程动态绑定
+           （说明注意事项：）
+            + 通过事件属性绑定函数,在行为发生时会自动执行函数
+            + 一个事件可以同时绑定多个函数
+            + 一个元素可以同时绑定多个事件
+            + 方法中可以传入 this对象,代表当前元素
+> 
+         */
+        var fun1 = function(){
+            // alert("好耶");
+            console.log("danji")
+        }
+        function fun2(){
+            // alert("好耶*2") 
+            console.log("danji*2")
+        }
+
+        function fun3() {
+            alert("双击") 
+        }
+
+        function fun4() {
+            console.log("鼠标悬停了呢*4")
+        }
+
+        function fun5() {
+            console.log("鼠标移动了呢*5")
+        }
+        function fun6() {
+            console.log("鼠标移出了呢*6")
+        }
+        function fun7() {
+            console.log("键盘按下")
+        }
+        function fun8() {
+            console.log("鼠标抬起")
+        }
+
+        function testFocus(){
+            console.log("获取焦点")
+        }
+
+        function testBler(){
+            console.log("失去焦点")
+        }
+
+        function testChange(){
+            console.log("内容发生改变")
+        }
+
+
+
+/* onfocus获取焦点(光标到达输入得位置) 
+   onblur元素失去焦点时触发，(把输入状态点其他地方让其失去原有得输入状态)
+   onchange该事件在表单元素的内容改变时触发
+*/
+   
+    </script>
+</head>
+<body>
+    <form action="/demo_html/05图片.html">
+        昵称：<input type="text"
+            onfocus="testFocus()"
+            onblur="testBler()"
+            onchange="testChange()"
+        >
+        账号：<input type="text"><hr>
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+
+    </form>
+
+
+    <hr>
+    <hr>
+    <input type="button" value="点我" 
+        onclick="fun1(),fun2()"
+        ondblclick="fun3()"
+    >
+    <hr>
+    <img src="/demo_html/img/eye.png" alt="眼睛"
+        onmouseover="fun4()"
+        onmousemove="fun5()"
+        onmouseleave="fun6()"
+    >
+    <hr>
+    <input type="text"
+        onkeydown="fun7()"
+        onkeyup="fun8()"
+    >
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 常用类库（常用对象） -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 1.数组（像java中的集合,但JS可以在一个数组中放不同类型的数据）
+                ①数组的创建
+                    + new Array()创建空数组
+                    + new Array(5)创建数组时给定长度
+                    + new Array(ele1,ele2,ele3,...,... ,elen);创建数组时指定元素值
+                    + [ele1,ele2,ele3,... ... ,elen];相当于第三种语法的简写
+                ②数组的API
+                ③Js中的数组说变就变（即可变长度）
+                
+                */
+       var arr = new Array();
+       console.log(arr)
+       console.log(arr.length)
+
+       arr[0] = "zhangsan";
+       arr[1] = 10;
+       console.log(arr)
+       console.log(arr.length)
+
+       var arr1 = ["水","面包","苹果"]
+       var arr2 = ["花","鸟","人"];
+       var arrall = arr1.concat(arr2);
+       console.log(arr1)
+       console.log(arr2)
+       console.log(arrall)//(6) ['水', '面包', '苹果', '花', '鸟', '人']
+
+       /* pop():删除数组的最后一个元素并返回删除的元素 */
+       var arrpop = arrall.pop();
+       console.log(arrpop);
+       console.log(arrall);//(5) ['水', '面包', '苹果', '花', '鸟']
+
+       var arrpush = arrall.push("新加");
+       console.log(arrall)
+
+       /* 截取数组中的某段 */
+       console.log(arrall.slice(2,3))
+
+       /* 删除和添加元素 */
+       arrall.splice(2,0,"jia","jian")
+       console.log(arrall)
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

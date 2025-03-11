@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var person = new Object();
+
+        person.name = "张小明";
+        person.age = 18 ;
+
+        /*语法1 通过new Object()直接创建对象*/
+        person.eat = function(name,age,food){
+            console.log(this.name+" "+this.age+"岁"+"正在吃"+food)
+        }
+
+        console.log(person.name);
+        console.log(person.age);
+        person.eat(person.name,person.age,"苹果");
+
+        /*语法2 通过 {}形式创建对象  :
+        语法为  var person ={"属性名":"属性值","属性名","属性值","函数名":函数}*/
+        var person2 = {
+                "name" :"江泽",
+                "age":30,
+                "eat":function(food){
+                    console.log(this.age+"岁"+"的"+this.name +"在吃"+food)
+                }
+        }
+        person2.eat("苹果");
+
+
+    </script>
+</head>
+
+
+<body>
+    <p>111</p>
+</body>
+</html>
