@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10jsDOM编程处理事件</title>
+    <script>
+    /* 绑定方式：
+    1.通过元素得属性绑定  onXXX（一些属性）
+      这里只有第一种绑定事件的方式
+    2.通过DOM编程动态绑定
+     （说明注意事项：）
+      + 通过事件属性绑定函数,在行为发生时会自动执行函数
+      + 一个事件可以同时绑定多个函数
+      + 一个元素可以同时绑定多个事件
+      + 方法中可以传入 this对象,代表当前元素
+   */
+
+    /*常见的事件：鼠标事件，键盘事件，表单事件
+        还有一个特殊事件：页面加载事件 onload(是浏览器的行为)
+        当浏览器扫描完所有语句后再执行（onload可以是body的属性）
+    */
+    </script>
+
+    <script>
+        /*方式三：body中不加属性onload，用window，如下：*/
+       
+        window.onload = function () {
+            //通过BOM获得操作的元素（通过id来获取其对应标签）
+            var btn = document.getElementById("btn01");/*通过btn01的ID来找到该标签，并且把它当成一个位置对象赋给别的变量*/
+            //绑定一个事件的单击
+            btn.onclick = function () {
+                alert("单机按钮了");
+            }
+        }
+            
+        
+
+    </script>
+
+
+    
+</head>
+<body>
+    
+    <button id="btn01">按钮啊</button>
+    
+</body>
+</html>
