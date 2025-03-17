@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function funA() {
+            /*重启浏览器后数据不在*/
+            sessionStorage.setItem("keyaA","valueSession")
+
+            /*重启浏览器后数据还在*/
+            localStorage.setItem("keyaB","valueLocal")
+        }
+        function funB() {
+            /*通过名字来找到value*/
+            console.log(sessionStorage.getItem("keyaA"))
+            console.log(localStorage.getItem("keyaB"))
+        }
+        function funC() {
+            sessionStorage.removeItem("keyaA")
+            localStorage.removeItem("keyaB")
+        }        
+
+
+    </script>
+</head>
+<body>
+    <button onclick="funA()">数据存储</button>
+    <button onclick="funB()">数据读取</button>
+    <button onclick="funC()">数据清空</button>
+</body>
+</html>

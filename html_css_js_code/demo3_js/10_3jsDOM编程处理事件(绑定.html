@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>10jsDOM编程处理事件</title>
+    <title>10jsDOM编程处理事件（单机按钮时确定也可以触发方块变颜色）</title>
     <script>
     /* 绑定方式：
     1.通过元素得属性绑定  onXXX（一些属性）
@@ -22,28 +22,27 @@
     */
     </script>
 
-    <script>
-        /*DOM编程除了动态绑定事件，还可以触发事件*/
-       
-        window.onload = function () {
-            //通过BOM获得操作的元素（通过id来获取其对应标签）
-            var btn = document.getElementById("btn01");/*通过btn01的ID来找到该标签，并且把它当成一个位置对象赋给别的变量*/
-            //绑定一个事件的单击
-            btn.onclick = function () {
-                alert("单机按钮了");
-            }
+    <script>     
 
+            /*这个函数先声明下面的变量，等浏览器全部扫描完所有语句后，在执行这里的*/
+            window.onload = function () {
 
-            /*为div1绑定事件*/
-            var div1 = document.getElementById("d01");
-            div1.onclick = function() {
-                div1.style.backgroundColor = "red"
-            }
+                /*DOM编程除了动态绑定事件，还可以触发事件*/
+                /*为div1绑定事件*/
+                var div1 = document.getElementById("d01");
+                    div1.onclick = function() {
+                    div1.style.backgroundColor = "red"
+                }
 
-        }
+                    //通过BOM获得操作的元素（通过id来获取其对应标签）
+                    var btn = document.getElementById("btn01");/*通过btn01的ID来找到该标签，并且把它当成一个位置对象赋给别的变量*/
+                    //绑定一个事件的单击
+                    btn.onclick = function () {
+                        alert("单机按钮了");
+                        div1.onclick()
+                    }
+                }
 
-     
-            
         
 
     </script>
@@ -61,6 +60,8 @@
     <div id="d01" class="div01"> </div>
     
     <button id="btn01">按钮啊</button>
+
+    <a href="11Bom编程常见API.html">11Bom编程常见API</a>
     
 </body>
 </html>

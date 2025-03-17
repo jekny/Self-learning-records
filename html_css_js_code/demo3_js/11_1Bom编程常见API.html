@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>/*window对象是供我们使用的，无需自己new
+            window.可以省略不写
+            1.三种弹窗方式：
+                alert
+                prompt
+                confirm
+
+            2.定时任务
+
+    */
+
+        b1 = function(){
+            alert("信息显示框");
+        }
+        b2 = function(){
+            var d = window.prompt("信息输入框");
+            console.log(d);
+        }
+        function b3(){
+            var d = window.confirm("信息确认框");
+            console.log(d);
+        }
+
+        function funA(){
+            history.back()
+        }
+        function funB(){
+            history.forward()
+        }
+       
+
+    </script>
+</head>
+<body>
+    <button onclick="funA()">上一页</button>
+    <button onclick="funB()">下一页</button>
+    <a href="/demo3_js/10_3jsDOM编程处理事件(绑定.html">10_3</a>
+
+    <hr>
+    <button class="b1" onclick="b1()">信息显示框</button>    
+    <button class="b2" onclick="b2()">信息输入框</button>    
+    <button class="b3" onclick="b3()">信息确认框</button>   
+    
+    
+</body>
+</html>
